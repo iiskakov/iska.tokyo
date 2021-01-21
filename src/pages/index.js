@@ -43,7 +43,9 @@ const IndexPage = () => {
     <Layout>
       <ReactCursorPosition
         style={{ width: `100%`, minHeight: `600px` }}
-        activationInteractionTouch={INTERACTIONS.TOUCH}
+        activationInteractionPress={INTERACTIONS.PRESS}
+        pressDurationInMs={0} //default
+        pressMoveThreshold={500} //default
       >
         <PositionLabel />
         <div style={{ paddingLeft: `0.5rem` }}>
