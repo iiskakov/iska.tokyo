@@ -7,6 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -22,9 +23,12 @@ const Layout = ({ children }) => {
         <footer
           style={{
             marginTop: `2rem`,
+            paddingLeft: `0.5rem`,
           }}
         >
-          © {new Date().getFullYear()}
+          © till 3005 <br /> Typeface — TT Alientz by Vika Usmanova
+          {` `}
+
         </footer>
       </div>
     </>

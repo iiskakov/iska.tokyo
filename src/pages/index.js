@@ -25,7 +25,7 @@ const IndexPage = () => {
     <Layout>
       <div
         onMouseMove={() => updateStyles({ DSPL: randomSetting() })}
-        onTap={() => updateStyles({ DSPL: randomSetting() })}
+        onTouchMove={() => updateStyles({ DSPL: randomSetting() })}
         style={{ width: `100%`, minHeight: `600px` }}
       >
         <div style={{ paddingLeft: `0.5rem` }}>
@@ -33,40 +33,40 @@ const IndexPage = () => {
             style={{
               ...customStyles,
               color: `#760000`,
-              fontSize: `12vh`,
+              fontSize: `15vh`,
               fontWeight: `400`,
             }}
           >
             iska
           </h1>
           <p>
-            Sup, I'm Iskander.
+            † Sup, I'm Iskander.
             <br />
-            I'm a student at 42 Silicon Valley.
-            <br />I once founded an{" "}
+            † I'm a student at 42 Silicon Valley.
+            <br />† I once founded an{" "}
             <Link target="_blank" to="https://kapital.kz/business/54006/kak-prodavat-morozhenoye-s-ledyanoy-skovorody.html">
               ice-cream
             </Link>{" "}
             <Link target="_blank" to="https://www.buro247.kz/lifestyle/city/novoe-mesto-na-karte-almaty-kafe-morozhenoe-kosm-z.html">
-              brand
+              brand.
             </Link>{" "}
             <br />
           </p>
           <p>
-            Curious about: functional programming, generative design and complex
+            † Curious about: functional programming, generative design and complex
             systems.
             <br />
-            Trying to master: stoicism, brazilian jiu-jistu, meditation.
+            † Trying to master: stoicism, brazilian jiu-jistu, meditation.
           </p>
           <p>
-            First computer: 1999
+            † First computer: 1999
             <br />
-            First programming language: C<br />
-            Text editor: Doom Emacs.
+            † First programming language: C<br />
+            † Text editor: Doom Emacs.
             <br />
-            Currently learning: Clojure
+            † Currently learning: Clojure
             <br />
-            Recent project:{" "}
+            † Recent project:{" "}
             <Link target="_blank" to="https://optimistic-kowalevski-550adb.netlify.app/">
               IKEA Social Enterpreneurship
             </Link>{" "}
