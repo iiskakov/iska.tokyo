@@ -13,6 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
   font-family: "TTAlientzVar", georgia, serif;
+  font-variation-settings: "DSPL" 100;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -400,6 +401,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  max-width: 50%;
 }
 pre {
   margin-left: 0;
