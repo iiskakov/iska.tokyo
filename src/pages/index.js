@@ -44,10 +44,10 @@ const IndexPage = () => {
             <br />
             I'm a student at 42 Silicon Valley.
             <br />I once founded an{" "}
-            <Link to="https://kapital.kz/business/54006/kak-prodavat-morozhenoye-s-ledyanoy-skovorody.html">
+            <Link target="_blank" to="https://kapital.kz/business/54006/kak-prodavat-morozhenoye-s-ledyanoy-skovorody.html">
               ice-cream
             </Link>{" "}
-            <Link to="https://www.buro247.kz/lifestyle/city/novoe-mesto-na-karte-almaty-kafe-morozhenoe-kosm-z.html">
+            <Link target="_blank" to="https://www.buro247.kz/lifestyle/city/novoe-mesto-na-karte-almaty-kafe-morozhenoe-kosm-z.html">
               brand
             </Link>{" "}
             <br />
@@ -67,16 +67,16 @@ const IndexPage = () => {
             Currently learning: Clojure
             <br />
             Recent project:{" "}
-            <Link to="https://optimistic-kowalevski-550adb.netlify.app/">
+            <Link target="_blank" to="https://optimistic-kowalevski-550adb.netlify.app/">
               IKEA Social Enterpreneurship
             </Link>{" "}
           </p>
-          <Link to="https://www.instagram.com/iska/">instagram.com/iska</Link>{" "}
+          <Link target="_blank" to="https://www.instagram.com/iska/">instagram.com/iska</Link>{" "}
           <br />
-          <Link to="https://www.are.na/iska">are.na/iska</Link> <br />
-          <Link to="https://www.goodreads.com/3005 ">goodreads.com/3005</Link>
+          <Link target="_blank" to="https://www.are.na/iska">are.na/iska</Link> <br />
+          <Link target="_blank" to="https://www.goodreads.com/3005 ">goodreads.com/3005</Link>
           <br />
-          <Link to="https://t.me/iskander3005">t.me/iskander3005</Link>
+          <Link target="_blank" to="https://t.me/iskander3005">t.me/iskander3005</Link>
         </div>
       </div>
     </Layout>
