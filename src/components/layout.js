@@ -26,8 +26,6 @@ const Layout = ({ children }) => {
             paddingLeft: `0.5rem`,
           }}
         >
-          © till 3005 <br /> Typeface — TT Alientz by Vika Usmanova
-          {` `}
 
         </footer>
       </div>

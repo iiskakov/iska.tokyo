@@ -53,8 +53,7 @@ const IndexPage = () => {
             <br />
           </p>
           <p>
-            † Curious about: functional programming, generative design and complex
-            systems.
+            † Curious about: functional programming and generative design.
             <br />
             † Trying to master: stoicism, brazilian jiu-jistu, meditation.
           </p>
