@@ -102,6 +102,10 @@ const IndexPage = () => {
           <Link target="_blank" to="https://t.me/iskander3005">
             t.me/iskander3005
           </Link>
+          <br />
+          <Link target="_blank" to="https://sptfy.com/iska">
+            sptfy.com/iska
+          </Link>
         </div>
       </ReactCursorPosition>
     </Layout>
