@@ -32,7 +32,7 @@ const PositionLabel = props => {
           fontVariationSettings: `"DSPL" ${y}`,
         }}
       >
-        iskander iskakov{" "}
+        iska{" "}
       </h1>
     </div>
   )
