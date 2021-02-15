@@ -32,7 +32,7 @@ const PositionLabel = props => {
           fontVariationSettings: `"DSPL" ${y}`,
         }}
       >
-        iska{" "}
+        iskander iskakov{" "}
       </h1>
     </div>
   )
@@ -82,7 +82,7 @@ const IndexPage = () => {
             <br />† Recent project:{" "}
             <Link
               target="_blank"
-              to="https://optimistic-kowalevski-550adb.netlify.app/"
+              to="https://ikea.today/social-entrepreneurship/"
             >
               IKEA Social Enterpreneurship
             </Link>{" "}
