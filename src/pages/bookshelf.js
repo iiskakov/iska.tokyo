@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import useVariableFont from "react-variable-fonts"
 import ReactCursorPosition, {
-  INTERACTIONS,
+    INTERACTIONS,
 } from "@appinfini/react-cursor-position"
 import Pointable from "react-pointable"
 import Layout from "../components/layout"
@@ -16,116 +16,107 @@ const books = [{ "title": "Exhalation", "isbn": "9781101972083", "author_name": 
 
 
 const PositionLabel = props => {
-  const {
-    detectedEnvironment: {
-      isMouseDetected = false,
-      isTouchDetected = false,
-    } = {},
-    elementDimensions: { width = 0, height = 0 } = {},
-    isActive = false,
-    isPositionOutside = false,
-    position: { x = 0, y = 0 } = {},
-  } = props
+    const {
+        detectedEnvironment: {
+            isMouseDetected = false,
+            isTouchDetected = false,
+        } = {},
+        elementDimensions: { width = 0, height = 0 } = {},
+        isActive = false,
+        isPositionOutside = false,
+        position: { x = 0, y = 0 } = {},
+    } = props
 
-  return (
-    <div className="example__label">
-      <h1
-        style={{
-          color: `#760000`,
-          fontSize: `15vh`,
-          fontWeight: `400`,
-          fontVariationSettings: `"DSPL" ${y}`,
-        }}
-      >
-        bookshelf{" "}
-      </h1>
-    </div>
-  )
+    return (
+        <div className="example__label">
+            <h1
+                style={{
+                    color: `#760000`,
+                    fontSize: `15vh`,
+                    fontWeight: `400`,
+                    fontVariationSettings: `"DSPL" ${y}`,
+                }}
+            >
+                bookshelf{" "}
+            </h1>
+        </div>
+    )
 }
 
 const IndexPage = () => {
-  const years = [2021, 2020]
-  const booksByYear = years.map(year => (books.filter(function(book) {
-    return new Date(book.date_read).getFullYear() === year;
-  })))
-  return (
-    <Layout>
-      <ReactCursorPosition
-        style={{ width: `100%`, minHeight: `600px` }}
-        activationInteractionPress={INTERACTIONS.PRESS}
-        pressDurationInMs={0} //default
-        pressMoveThreshold={500} //default
-      >
-        <PositionLabel />
-        <div style={{ paddingLeft: `0.5rem` }}>
-          <p>
-            Here are some of the books I have read lately.
-            <br />
-            The list is also mirrored at{" "}
-            <Link target="_blank" to="https://goodreads.com/3005
+    const years = [2021, 2020]
+    const booksByYear = years.map(year => (books.filter(function(book) {
+        return new Date(book.date_read).getFullYear() === year;
+    })))
+    return (
+        <Layout>
+            <h1 style={{ fontSize: '10vh', color: 'rgb(118, 0, 0)' }}>bookshelf</h1>
+            <div style={{ paddingLeft: `0.5rem` }}>
+                <p>
+                    Here are some of the books I have read lately.
+                    <br />
+                    The list is also mirrored at{" "}
+                    <Link target="_blank" to="https://goodreads.com/3005
 ">
-              goodreads.com/3005
-            </Link>
-          </p>
-          <p style={{ fontSize: '2em' }}>2021</p>
-          {booksByYear[0].map((book, i) => (
-            <div class="book">
-              <span class="book_cover_container" key={i}>
+                        goodreads.com/3005
+                    </Link>
+                </p>
+                <p style={{ fontSize: '2em' }}>2021</p>
+                {booksByYear[0].map((book, i) => (
+                    <div class="book">
+                        <span class="book_cover_container" key={i}>
 
-                <img class="book_cover" alt={book.title} src={`https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg`} />
-              </span>
-              <div class="book_description">
-                <h4 key={i}>
-                  {book.my_rating === 5 ? <span alt="Great book!" class="bookshelf_featured_mark"> † </span> : null}
-                  {book.title}
-                  <br />
-                  <i class="text-light text-muted"><small>{book.author_name}</small></i>
-                  <br />
-                  <small>{book.my_rating}/5</small>
-                </h4>
-              </div>
+                            <img class="book_cover" alt={book.title} src={`https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg`} />
+                        </span>
+                        <div class="book_description">
+                            <h4 key={i}>
+                                {book.my_rating === "5" ? (<span alt="Great book!" class="bookshelf_featured_mark"><big> † </big></span>) : null}
+                                {book.title}
+                                <br />
+                                <i class="text-light text-muted"><small>{book.author_name}</small></i>
+                                <br />
+                            </h4>
+                        </div>
+                    </div>
+                ))}
+                <p style={{ fontSize: '2em' }}>2020</p>
+                {booksByYear[1].map((book, i) => (
+                    <div class="book">
+                        <span class="book_cover_container" key={i}>
+                            <img class="book_cover" alt={book.title} src={`https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg`} />
+                        </span>
+                        <div class="book_description">
+                            <h4 key={i}>
+                                {book.my_rating === "5" ? <span alt="Great book!" class="bookshelf_featured_mark"><big> † </big></span> : null}
+                                {book.title}
+                                <br />
+                                <i class="text-light text-muted"><small>{book.author_name}</small></i>
+                            </h4>
+                        </div>
+                    </div>
+                ))}
+                <Link target="_blank" to="https://www.instagram.com/iska/">
+                    instagram.com/iska
+                </Link>{" "}
+                < br />
+                <Link target="_blank" to="https://www.are.na/iska">
+                    are.na/iska
+                </Link>{" "}
+                < br />
+                <Link target="_blank" to="https://www.goodreads.com/3005 ">
+                    goodreads.com/3005
+                </Link>
+                <br />
+                <Link target="_blank" to="https://t.me/iskander3005">
+                    t.me/iskander3005
+                </Link>
+                <br />
+                <Link target="_blank" to="https://sptfy.com/iska">
+                    sptfy.com/iska
+                </Link>
             </div>
-          ))}
-          <p style={{ fontSize: '2em' }}>2020</p>
-          {booksByYear[1].map((book, i) => (
-            <div class="book">
-              <span class="book_cover_container" key={i}>
-                <img class="book_cover" alt={book.title} src={`https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg`} />
-              </span>
-              <div class="book_description">
-                <h4 key={i}>
-                  {book.my_rating === 5 ? <span alt="Great book!" class="bookshelf_featured_mark"> † </span> : null}
-                  {book.title}
-                  {console.log(Buffer.from(book.title, 'utf-8').toString())}
-                  <br />
-                  <i class="text-light text-muted"><small>{book.author_name}</small></i>
-                </h4>
-              </div>
-            </div>
-          ))}
-          <Link target="_blank" to="https://www.instagram.com/iska/">
-            instagram.com/iska
-          </Link>{" "}
-          < br />
-          <Link target="_blank" to="https://www.are.na/iska">
-            are.na/iska
-          </Link>{" "}
-          < br />
-          <Link target="_blank" to="https://www.goodreads.com/3005 ">
-            goodreads.com/3005
-          </Link>
-          <br />
-          <Link target="_blank" to="https://t.me/iskander3005">
-            t.me/iskander3005
-          </Link>
-          <br />
-          <Link target="_blank" to="https://sptfy.com/iska">
-            sptfy.com/iska
-          </Link>
-        </div>
-      </ReactCursorPosition>
-    </Layout >
-  )
+        </Layout >
+    )
 }
 
 export default IndexPage
