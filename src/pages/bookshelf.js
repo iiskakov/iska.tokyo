@@ -15,33 +15,6 @@ const books = [{ "title": "Exhalation", "isbn": "9781101972083", "author_name": 
 
 
 
-const PositionLabel = props => {
-    const {
-        detectedEnvironment: {
-            isMouseDetected = false,
-            isTouchDetected = false,
-        } = {},
-        elementDimensions: { width = 0, height = 0 } = {},
-        isActive = false,
-        isPositionOutside = false,
-        position: { x = 0, y = 0 } = {},
-    } = props
-
-    return (
-        <div className="example__label">
-            <h1
-                style={{
-                    color: `#760000`,
-                    fontSize: `15vh`,
-                    fontWeight: `400`,
-                    fontVariationSettings: `"DSPL" ${y}`,
-                }}
-            >
-                bookshelf{" "}
-            </h1>
-        </div>
-    )
-}
 
 const IndexPage = () => {
     const years = [2021, 2020]
@@ -50,7 +23,43 @@ const IndexPage = () => {
     })))
     return (
         <Layout>
-            <h1 style={{ fontSize: '10vh', color: 'rgb(118, 0, 0)' }}>bookshelf</h1>
+            <h1 style={{ fontSize: '8vw', color: 'rgb(118, 0, 0)', fontVariationSettings: '"DSPL" 420', marginBottom: '0' }}>bookshelf</h1>
+            <div style={{
+                paddingLeft: '0.5rem',
+                paddingBottom: '1.5rem'
+            }} >
+                <Link to="/">
+                    <span
+                        style={{
+                            paddingRight: '10px',
+                            fontWeight: `400`,
+                        }}
+                    >
+                        home
+                    </span>
+                </Link>
+                <Link to="/blog">
+                    <span
+                        style={{
+                            paddingRight: '10px',
+                            fontWeight: `400`,
+                        }}
+                    >
+                        blog
+                    </span>
+                </Link>
+                <Link to="/bookshelf">
+                    <span
+                        style={{
+                            paddingRight: '10px',
+                            fontWeight: `400`,
+                        }}
+                    >
+                        bookshelf
+                    </span>
+                </Link>
+            </div>
+
             <div style={{ paddingLeft: `0.5rem` }}>
                 <p>
                     Here are some of the books I have read lately.

@@ -23,18 +23,58 @@ const PositionLabel = props => {
   } = props
 
   return (
-    <div className="example__label">
+    <div style={{
+      marginBottom: '1.45rem'
+    }} className="example__label">
       <h1
         style={{
           color: `#760000`,
           fontSize: `15vh`,
           fontWeight: `400`,
           fontVariationSettings: `"DSPL" ${y}`,
+          marginBottom: '0'
         }}
       >
         iska{" "}
       </h1>
-    </div>
+      <div style={{
+        paddingLeft: '0.5rem'
+      }} >
+        <Link to="/">
+          <span
+            style={{
+              paddingRight: '10px',
+              fontWeight: `400`,
+              fontVariationSettings: `"DSPL" ${y}`,
+            }}
+          >
+            home
+          </span>
+        </Link>
+        <Link to="/blog">
+          <span
+            style={{
+              paddingRight: '10px',
+              fontWeight: `400`,
+              fontVariationSettings: `"DSPL" ${y}`,
+            }}
+          >
+            blog
+          </span>
+        </Link>
+        <Link to="/bookshelf">
+          <span
+            style={{
+              paddingRight: '10px',
+              fontWeight: `400`,
+              fontVariationSettings: `"DSPL" ${y}`,
+            }}
+          >
+            bookshelf
+          </span>
+        </Link>
+      </div>
+    </div >
   )
 }
 
@@ -52,7 +92,7 @@ const IndexPage = () => {
           <p>
             † Sup, I'm Iskander.
             <br />
-            † I'm a student at 42 Silicon Valley.
+            † I'm a Software Engineering student at 42 Silicon Valley.
             <br />† I once founded an{" "}
             <Link
               target="_blank"
@@ -70,7 +110,6 @@ const IndexPage = () => {
           </p>
           <p>
             † Curious about: functional programming and generative design.
-            <br />† Trying to master: stoicism, brazilian jiu-jistu, meditation.
           </p>
           <p>
             † First computer: 1999
