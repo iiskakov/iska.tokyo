@@ -4,6 +4,21 @@ import ReactCursorPosition, {
   INTERACTIONS,
 } from "@appinfini/react-cursor-position"
 import Layout from "../components/layout"
+import { useEffect } from 'react';
+
+function useImperativeDisableScroll({ element, disabled }) {
+  useEffect(() => {
+    if (!element) {
+      return
+    }
+
+    element.style.overflowY = disabled ? 'hidden' : 'scroll'
+
+    return () => {
+      element.style.overflowY = 'scroll'
+    }
+  }, [disabled])
+}
 
 const PositionLabel = props => {
   const {
@@ -17,7 +32,7 @@ const PositionLabel = props => {
       <h1
         style={{
           color: `#760000`,
-          fontSize: `15vh`,
+          fontSize: `8vw`,
           fontWeight: `400`,
           fontVariationSettings: `"DSPL" ${y}`,
           marginBottom: '0'
@@ -67,6 +82,7 @@ const PositionLabel = props => {
 }
 
 const IndexPage = () => {
+  useImperativeDisableScroll({ element: document.body, disabled: true })
   return (
     <Layout>
       <ReactCursorPosition
@@ -76,7 +92,7 @@ const IndexPage = () => {
         pressMoveThreshold={500} //default
       >
         <PositionLabel />
-        <div style={{ paddingLeft: `0.5rem` }}>
+        <div style={{ paddingLeft: `0.5rem`, height: '100%', overflow: 'hidden', touchAction: 'none' }}>
           <p>
             † I'm Iskander, a Software Engineering student at 42 Silicon Valley.
             <br />† I once founded an{" "}
