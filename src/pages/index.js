@@ -106,7 +106,7 @@ const IndexPage = () => {
               target="_blank"
               to="https://www.buro247.kz/lifestyle/city/novoe-mesto-na-karte-almaty-kafe-morozhenoe-kosm-z.html"
             >
-              brand.
+              company.
             </Link>{" "}
             <br />
           </p>
