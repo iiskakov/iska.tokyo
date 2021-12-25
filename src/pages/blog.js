@@ -56,7 +56,7 @@ const IndexPage = () => {
           <i class="text-light text-muted"><small> Dec, 16, 2021</small></i>
         </p>
         <p>
-          <Link target="_blank" to="#">Jorne split keyboard how-to guide</Link>
+          <Link target="_blank" to="https://telegra.ph/Jorne-split-keyboard-how-to-guide-12-25">Jorne split keyboard how-to guide</Link>
           <i class="text-light text-muted"><small> Nov, 28, 2021</small></i>
         </p>
         <p>
