@@ -94,7 +94,7 @@ const IndexPage = () => {
         <PositionLabel />
         <div style={{ paddingLeft: `0.5rem`, height: '100%', overflow: 'hidden', touchAction: 'none' }}>
           <p>
-            † I'm Iskander, a Software Engineering student at 42 Silicon Valley.
+            † I'm Iskander, a Software Engineering cadet at 42 Silicon Valley.
             <br />† I once founded an{" "}
             <Link
               target="_blank"
@@ -111,7 +111,7 @@ const IndexPage = () => {
             <br />
           </p>
           <p>
-            † Curious about: functional programming and generative design.
+            † Curious about: philosophy, self organizing systems, generative design.
             <br />
             † First computer in: 1999
             <br />
